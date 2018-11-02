@@ -1,0 +1,84 @@
+{% load i18n %}
+<footer class="footer container-fluid">
+    {% block footer %}
+        
+<!-- ============================================================= footer ===================================================================== -->
+
+    <div class="footer">
+        <div class="container">
+          <div class="row">
+            <h3>Sendiri <img src="http://res.cloudinary.com/bzzt/image/upload/c_scale,w_100/v1484676640/SM_roundlogo_mmrqbl.png" alt="Search" /> Made</h3>
+          </div>
+
+              <hr>
+              <p>
+                Follow Us On
+              </p>
+                <a href='#'><i class="fa fa-twitch fa-3x fa-fw"></i></a>
+                <a href='#'><i class="fa fa-facebook fa-3x fa-fw"></i></a>
+                <a href='#'><i class="fa fa-twitter fa-3x fa-fw"></i></a>
+                <a href='#'><i class="fa fa-youtube-play fa-3x fa-fw"></i></a>
+                <a href='#'><i class="fa fa-rss fa-3x fa-fw"></i></a>
+                <a href='#'><i class="fa fa-vine fa-3x fa-fw"></i></a>
+                <a href='#'><i class="fa fa-flickr fa-3x fa-fw"></i></a>
+                <a href='#'><i class="fa fa-linkedin fa-3x fa-fw"></i></a>
+              </span>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="pull-left"> Copyright © Sendiri <img src="http://res.cloudinary.com/bzzt/image/upload/c_scale,w_25/v1484676640/SM_roundlogo_mmrqbl.png" alt="Search" /> Made 2018. All right reserved. </p>
+                <div class="pull-right">
+                    <ul class="nav nav-pills payments">
+                        <li><i class="fa fa-cc-visa"></i></li>
+                        <li><i class="fa fa-cc-mastercard"></i></li>
+                        <li><i class="fa fa-cc-amex"></i></li>
+                        <li><i class="fa fa-cc-paypal"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/.footer-bottom-->
+
+
+        <!--to top button-->
+        <div class="footer_bg1">
+             <div class="wrap">
+                  <!-- scroll_top_btn -->
+                  <script>
+
+                      //toTop script
+
+                      $(document).ready(function() {
+
+                          var defaults = {
+                              containerID: 'toTop', // fading element id
+                              containerHoverID: 'toTopHover', // fading element hover id
+                              scrollSpeed: 1200,
+                              easingType: 'linear'
+                          };
+
+
+                          $().UItoTop({ easingType: 'easeOutQuart' });
+
+                      });
+                  </script>
+
+                  <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+                  <!--end scroll_top_btn -->
+
+             </div>
+         </div><!--to top button-->
+
+      </div><!-- footer -->
+
+  <!-- ============================================================= footer End ===================================================================== -->
+	
+		{% comment %}
+            Could be used for displaying links to privacy policy, terms of service, etc.
+            We have a CSS class defined:
+                <ul class="footer_links inline">
+                    ...
+                </ul>
+         {% endcomment %}
+    {% endblock %}
+</footer>

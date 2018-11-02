@@ -1,0 +1,120 @@
+{% load i18n %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:"en-gb" }}" class="no-js">
+    <head>
+        <title>{% block title %}{{ shop_name }} - {{ shop_tagline }}{% endblock %}</title>
+
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="created" content="{% now "jS M Y h:i" %}" />
+        <meta name="description" content="{% block description %}{% endblock %}" />
+        <meta name="viewport" content="{% block viewport %}width=device-width{% endblock %}" />
+        <meta name="robots" content="NOARCHIVE,NOCACHE" />
+      
+        														<!-- SendiriMad3 Own Files -->
+        <meta charset="utf-8">
+      	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+      	<meta name="viewport" content="width=device-width, initial-scale=1">
+      	<meta name="description" content="" />
+      	<meta name="keywords" content="" />
+      	<meta name="author" content="" />
+        
+        <!-- Facebook and Twitter integration -->
+      	<meta property="og:title" content=""/>
+      	<meta property="og:image" content=""/>
+      	<meta property="og:url" content=""/>
+      	<meta property="og:site_name" content=""/>
+      	<meta property="og:description" content=""/>
+      	<meta name="twitter:title" content="" />
+      	<meta name="twitter:image" content="" />
+      	<meta name="twitter:url" content="" />
+      	<meta name="twitter:card" content="" />
+      
+      
+        {% block favicon %}
+            <link rel="shortcut icon" href="{% static "oscar/favicon.ico" %}" />
+        {% endblock %}
+
+        {# Block where global CSS will go. #}
+        {% block styles %}{% endblock %}
+
+        {# Additional CSS - specific to certain pages #}
+        
+        													<!-- SendiriMad3 CSS -->
+																<!-- Animate.css -->			
+          <!--link href= "{% static "oscar/css/bootstrap.min.css" %}" rel="stylesheet"-->			
+          <link href= "{% static "oscar/css/animate.css" %}" rel="stylesheet">			
+															<!-- Icomoon Icon Fonts-->			
+          <link rel="stylesheet" href="{% static "oscar/css/font-awesome.css" %}">			
+																	<!-- Bootstrap  -->			
+          <link rel="stylesheet" href="{% static "oscar/css/bootstrap.css" %}">			
+																	<!-- Superfish -->	
+          <link rel="stylesheet" href="{% static "oscar/css/jquery.flex-images.css" %}">
+          <link rel="stylesheet" href="{% static "oscar/css/blueimp-gallery.min.css" %}">
+          <link rel="stylesheet" href="{% static "oscar/css/style.css" %}">
+          <link rel="stylesheet" href="{% static "oscar/css/bootcards-desktop.css" %}">
+          <link rel="stylesheet" href="{% static "oscar/css/morris.css" %}">
+          <link rel="stylesheet" href="{% static "oscar/css/invoice.css" %}">
+          <link rel="stylesheet" href="{% static "oscar/css/flickity.css" %}">
+          <link rel="stylesheet" href="{% static "oscar/css/flickitycustom.css" %}">
+          <link rel="stylesheet" href="{% static "oscar/css/cardsbackground.css" %}">
+          <link rel="stylesheet" href="{% static "oscar/css/latestcustom.css" %}">
+
+        {% block extrastyles %}{% endblock %}
+
+        {% block extrahead %}{% endblock %}
+
+        {% block tracking %}
+            {# Default to using Google analytics #}
+            {% include "partials/google_analytics.html" %}
+        {% endblock %}
+    </head>
+
+    <body id="{% block body_id %}default{% endblock %}" class="{% block body_class %}default{% endblock %}">
+        {# Main content goes in this 'layout' block #}
+        {% block layout %}{% endblock %}
+
+        {# Scripts loaded from a CDN. #}
+        {% block cdn_scripts %}
+            <!-- jQuery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="{% static "oscar/js/jquery/jquery.min.js" %}"><\/script>')</script>
+        {% endblock %}
+
+        {# Local scripts #}
+        {% block scripts %}
+        {% endblock %}
+
+        {# Additional JS scripts #}
+        
+        					       <!-- SendiriMad3 Javascript -->		
+					<script src="{% static "oscar/js/jquery-3.2.1.js" %}"></script>
+					<script src="{% static "oscar/js/jquery.flex-images.min.js" %}"></script>
+					<script src="{% static "oscar/js/bootstrap.js" %}"></script>
+					<script src="{% static "oscar/js/move-top.js" %}"></script>
+					<script src="{% static "oscar/js/list.js" %}"></script>
+					<script src="{% static "oscar/js/jquery.blueimp-gallery.min.js" %}"></script>
+					<script src="{% static "oscar/js/bootcards.js" %}"></script>
+					<script src="{% static "oscar/js/easing.js" %}"></script>
+					<script src="{% static "oscar/js/morris.js" %}"></script>
+					<script src="{% static "oscar/js/touchSwipe.min.js" %}"></script>
+					<script src="{% static "oscar/js/wow.min.js" %}"></script>
+			  	<script src="{% static "oscar/js/flickity.pkgd.js" %}"></script>
+					<script src="{% static "oscar/js/flickity-nav.js" %}"></script>
+					<script src="{% static "oscar/js/raphael.min.js" %}"></script>
+					<script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
+      
+      
+      
+        {% block extrascripts %}{% endblock %}
+
+        {# Block for body onload functions #}
+        <script>
+            $(function() {
+                {% block onbodyload %}{% endblock %}
+            });
+        </script>
+
+        {# Page meta-data - this is populated by the 'metadata' template context processor #}
+    </body>
+</html>

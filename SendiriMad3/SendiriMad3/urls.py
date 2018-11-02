@@ -18,7 +18,7 @@ Including another URLconf
 from django.urls import include, path  # > Django-2.0
 from django.contrib import admin
 from oscar.app import application
-#from . import views
+from . import views
 
 urlpatterns = [
     #url(r'^i18n/', include('django.conf.urls.i18n')),
@@ -32,7 +32,24 @@ urlpatterns = [
 
     #url(r'', application.urls),
      path('', application.urls),  # > Django-2.0
-    #path('Home/', views.home, name='home'),
-
-
+     path('Home/', views.home, name='home'),
+     path('OnSale/',views.OnSale, name='OnSale'),
+     path('ArtisanOfTheMonth/',views.artisanofthemonth, name='artisanofthemonth'),
+     path('FAQ/',views.faq, name='faq'),
+  
+  
+  
+  
+    #ShopsCategories
+     path('HomeDecor/',views.homedecor, name='homedecor'),
+     path('LifeStyle/',views.lifestyle, name='lifestyle'),
+     path('Fashion/',views.fashion, name='fashion'),
+     path('Jewelry/',views.jewelry, name='jewelry'),
+     path('BeautyProduct/',views.beautyproduct, name='beautyproduct'),
+     path('Music&Arts/',views.musicart, name='musicart'),
+     path('Hobbies/',views.hobbies, name='hobbies'),
+     path('Food&Beverages /',views.foodbeverages, name='foodbeverages'),
+     path('Weddings/',views.weddings, name='weddings'),
+     path('GiftIdeas/',views.giftideas, name='giftideas'), 
+  
 ]
