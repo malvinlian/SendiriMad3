@@ -1,0 +1,145 @@
+{% load i18n %}
+{% load currency_filters %}
+
+
+<div id="top_page" class="navbar navbar-default navbar-fixed-top accounts" role="navigation">
+    {# This is used in mobile view #}
+    <div class="navbar-header">
+        <a class="btn btn-default navbar-toggle collapsed" data-toggle="collapse" data-target=".account-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+			<a class="navbar-brand" href="{% url 'home' %}">SendiriMad3</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">
+                  <img src="http://res.cloudinary.com/bzzt/image/upload/c_scale,w_45/v1484676640/SM_roundlogo_mmrqbl.png" alt="">
+              </a>
+    </div>
+		 <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown hidden-lg hidden-md">
+                              <a href="{% url 'OnSale' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shop <span class="caret"></span></a>
+                              <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{% url 'OnSale' %}">On Sale</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Categories</li>
+                                <li><a href="{% url 'homedecor' %}">Home Decor</a></li>
+                                <li><a href="{% url 'lifestyle' %}">Lifestyle</a></li>
+                                <li><a href="{% url 'fashion' %}">Fashion</a></li>
+                                <li><a href="{% url 'jewelry' %}">Jewelry</a></li>
+                                <li><a href="{% url 'beautyproduct' %}">Beauty Product</a></li>
+                                <li><a href="{% url 'musicart' %}">Music & Arts</a></li>
+                                <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
+                                <li><a href="{% url 'foodbeverages' %}">Food & Beverages</a></li>
+                                <li><a href="{% url 'weddings' %}">Weddings</a></li>
+                              </ul>
+                        </li>
+                        <li class="dropdown hidden-lg hidden-md">
+                              <a href="{% url 'artisanofthemonth' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Artisan<span class="caret"></span></a>
+                              <ul class="dropdown-menu" role="menu">
+                                <li><a href="{% url 'artisanofthemonth' %}">Artisan of the Month</a></li>
+                                <li><a href="pages/signin.html">Sign In</a></li>
+                                <li><a href="pages/signup.html">Sign Up</a></li>
+                                <li><a href="pages/maker.html">Become an Artisan</a></li>
+                                <li><a href="{% url 'faq' %}">FAQ</a></li>
+                              </ul>
+                        </li>
+                        <li class="hidden-sm hidden-xs">
+                            <a href="{% url 'OnSale' %}">On Sale</a>
+                        </li>
+                        <li class="hidden-sm hidden-xs">
+                            <a href="{% url 'artisanofthemonth' %}">Artisan Of The Month</a>
+                        </li>
+                    </ul>
+                    <!--ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#signup-modal">Sign Up</a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#signin-modal">Sign In</a>
+                        </li>
+                    </ul-->
+
+    <div class="navbar-collapse account-collapse collapse" id="Snd3">
+        <div class="container-fluid">
+					
+            <!-- mini basket main -->
+						<div class="basket-mini pull-right hidden-xs" id="basket">
+					<strong>{% trans "Basket total:" %}</strong>
+					{% if request.basket.is_tax_known %}
+							{{ request.basket.total_incl_tax|currency:request.basket.currency }}
+					{% else %}
+							{{ request.basket.total_excl_tax|currency:request.basket.currency }}
+					{% endif %}
+
+					<span class="btn-group">
+							<a class="btn btn-default" href="{% url 'basket:summary' %}">{% trans "View basket" %}</a>
+							<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+									<li>{% include "basket/partials/basket_quick.html" %}</li>
+							</ul>
+					</span>
+							<style>
+								#basket{
+									padding-top: 15px;
+									padding-left: 15px;
+								}
+								#Snd3{
+									 padding-top: 2px;
+								}
+</style>
+			</div>
+																																						
+						<!-- {% block nav_account_languages %}
+            {% if LANGUAGES|length > 1 %}
+                <form id="language_selector" class="navbar-left navbar-form" action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ language_neutral_url_path }}" />
+                    <div class="form-group">
+                        <select name="language" class="form-control">
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE%} selected="selected"{% endif %}>
+                                    {{ language.name_local }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button class="btn btn-default" type="submit" data-loading-text="{% trans 'Submitting...' %}">{% trans "Go" %}</button>
+                </form>
+            {% endif %}
+            {% endblock %} -->
+					<!--	{% include "partials/search.html" %} -->
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                {% block nav_account_navbar_authenticated %}
+                    <li>
+                        {% if num_unread_notifications > 0 %}
+                            {# If user has new notifications - we change account link to go to inbox #}
+                            <a href="{% url 'customer:notifications-inbox' %}">
+                                <i class="icon-user"></i>
+                                {% trans "Account" %}
+                                <span class="label label-warning">{{ num_unread_notifications }}</span>
+                            </a>
+                        {% else %}
+                            <a href="{% url 'customer:summary' %}"><i class="icon-user"></i> {% trans "Account" %}</a>
+                        {% endif %}
+                    </li>
+                    {% if user.is_staff or perms.partner.dashboard_access %}
+                        <li><a href="{% url 'dashboard:index' %}"><i class="icon-list-ul"></i> {% trans "Dashboard" %}</a></li>
+                    {% endif %}
+                    <li><a id="logout_link" href="{% url 'customer:logout' %}"><i class="icon-signout"></i> {% trans "Logout" %}</a></li>
+                {% endblock %}
+                {% else %}
+                    <li><a id="login_link" href="{% url 'customer:login' %}"><i class="icon-signin"></i> {% trans "Login or register" %}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+
