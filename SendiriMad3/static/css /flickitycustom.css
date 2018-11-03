@@ -1,0 +1,234 @@
+ /* image gallery */
+/* external css: flickity.css */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.gallery img {
+  display: block;
+  height: 200px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .gallery img {
+    height: 400px;
+  }
+}
+
+/* you might also like gallery -------------------------------------- */
+.relatedgallery img {
+  display: block;
+  height: 200px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .relatedgallery img {
+    height: 250px;
+  }
+}
+
+
+
+/* product/category header img gallery-----------------------------------*/
+
+.headergallery img {
+  display: block;
+  height: 200px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .headergallery img {
+    height: 400px;
+  }
+}
+
+/* product gallery for items bootcards------------------- */
+.productgallery {
+  width: 400px;
+  height: 300px;
+}
+
+.productgallery img {
+  display: block;
+  height: 100%;
+}
+
+@media screen and ( min-width: 768px ) {
+  .productgallery img {
+    height: 300px;
+  }
+}
+
+/* as nav --------------------------------------------- */
+
+/* external css: flickity.css */
+
+.navgallery {
+  background: #FAFAFA;
+  margin-bottom: 30px;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  counter-increment: gallery-cell;
+}
+
+.gallery-cell img {
+  width: 100%;
+  height: 200px;
+  margin-right: 10px;
+  counter-increment: gallery-cell;
+}
+
+
+/* cell number */
+.gallery-cell:before {
+}
+
+/*Profile desktop View Product AsNav Gallery---------------------------------------------------*/
+
+.navprofiled {
+  background: #FAFAFA;
+  margin-bottom: 30px;
+}
+
+.profiled-cell {
+  width: 400px;
+  height: 400px;
+  margin-right: 10px;
+  counter-increment: profiled-cell;
+}
+
+.profiled-cell img {
+  width: 100%;
+  height: 100%;
+  counter-increment: profiled-cell;
+}
+
+
+/* cell number */
+.profiled-cell:before {
+}
+
+.navprofiled-cell {
+  width: 1200px;
+  height: 150px;
+  margin-top: 10px;
+  padding-top: 10px;
+  counter-increment: navprofiled-cell;
+}
+
+/* cell number */
+.navprofiled-cell:before {
+}
+
+/*Profile Mobile View Product AsNav Gallery---------------------------------------------------*/
+
+.navprofile {
+  background: #FAFAFA;
+  margin-bottom: 30px;
+}
+
+.profile-cell {
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+  counter-increment: profile-cell;
+}
+
+.profile-cell img {
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+  counter-increment: profile-cell;
+}
+
+
+/* cell number */
+.profile-cell:before {
+}
+
+.navprofile-cell {
+  width: 400px;
+  height: 100px;
+  margin-top: 10px;
+  padding-top: 10px;
+  counter-increment: navprofile-cell;
+}
+
+
+
+
+/* cell number */
+.navprofile-cell:before {
+}
+
+/*  product asnav for top picks and etc -----------------------------*/
+.image-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  counter-increment: image-cell;
+}
+
+.image-cell img {
+  width: 100%;
+  height: 400px;
+  margin-right: 10px;
+  counter-increment: image-cell;
+}
+
+@media screen and ( min-width: 768px ) {
+  .image-cell img {
+    height: 400px;
+  }
+}
+
+/* cell number */
+.image-cell:before {
+}
+
+.navimage-cell {
+  width: 250px;
+  height: 200px;
+  margin-right: 10px;
+  counter-increment: navimage-cell;
+}
+
+.navimage-cell img {
+  width: 250px;
+  height: 200px;
+  margin-right: 10px;
+  counter-increment: navimage-cell;
+}
+
+
+/* cell number */
+.navimage-cell:before {
+}
+
+/* --------------------------------------------------------- */
+/* lazy load -------- */
+.galleryload {
+  background: #FAFAFA;
+  height: 300px;
+}
+
+.galleryload-cell-image {
+  display: block;
+  height: 300px;
+  min-width: 200px;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.galleryload-cell-image.flickity-lazyloaded,
+.galleryload-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
