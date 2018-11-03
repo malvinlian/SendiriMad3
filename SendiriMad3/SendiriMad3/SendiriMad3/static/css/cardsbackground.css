@@ -1,0 +1,92 @@
+/*!
+ * Start Bootstrap - Full Width Pics HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+
+/* Custom Background image card panel body */
+.image-bg-fluid-height {
+	background: url('static/images/2.svg') no-repeat center center  scroll;
+    padding: 80px 0;
+    height: 400px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.image-beartisan {
+	background: url('static/images/2b3d54roundeffectbackground.jpg') no-repeat center center  scroll;
+    padding: 80px 0;
+    height: 400px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+
+.bootcards-1 {
+ background: url('static/images/2.svg') no-repeat center center  fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* =================================== end custome background for cards ========================================= */
+
+
+
+/*
+
+<header class="image-bg-fluid-height">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>SendiriMade</h1>
+          <p class="lead">Find Something That Is Made For You</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-centered">
+        <div id="custom-search-input">
+            <div class="input-group col-md-12">
+                <input type="text" class="form-control input-lg" placeholder=" Search" />
+                <span class="input-group-btn">
+                    <button class="btn btn-info btn-lg" type="button">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</header>
+
+==================
+
+<div class="panel panel-default bootcards-richtext">
+     <div class="panel-heading">
+       <h3 class="panel-title">Be An Artisan</h3>
+     </div>
+     <div class="panel-body image-bg-fluid-height image-bg">
+       <br>
+       <h1>Create & Sell</h1>
+       <p>Let us help make your passion into a business.</p>
+       <a href="#" class="btn btn-primary">Become an Artisan</a>
+
+     </div>
+   </div><!--end rich text card-->
+
+   =========================
+
+   <div class="panel panel-default bootcards-richtext bootcards-1 text-center">
+     <div class="panel-body">
+      <h4>Review</h4>
+      <p>Disqus Here</p>
+     </div>
+   </div>
+
+*/

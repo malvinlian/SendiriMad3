@@ -1,0 +1,166 @@
+{% extends 'oscar/layout.html' %}
+{% load staticfiles %}
+
+{% block content_wrapper %}
+
+<div class="container text-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <img src="http://res.cloudinary.com/bzzt/image/upload/c_scale,w_100/v1484676640/SM_roundlogo_mmrqbl.png" alt="Search" />
+              <h1>Sendiri Made</h1>
+              <p class="lead">Find Something That Is Made For You</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-centered">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder=" Search" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div> <!-- end container -->
+
+    <br>
+
+    <div class="container text-center">
+      <div class="row vdivide">
+      <div class="col-lg-12">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <a href="{% url 'giftideas' %}"><img src="http://res.cloudinary.com/bzzt/image/upload/v1501322691/promoImage/JPEG_image-EFFBA1E9F6AC-1-min.jpg" class="img-responsive" alt="Gift Ideas" /></a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <a href="shop/categorypage.html"><img src="http://res.cloudinary.com/bzzt/image/upload/v1501322695/promoImage/JPEG_image-480C6B7E0B07-1-min.jpg" class="img-responsive" alt="Best Of August" /></a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <a href="shop/categorypage.html"><img src="http://res.cloudinary.com/bzzt/image/upload/v1501322673/promoImage/JPEG_image-0FE956560D2A-1-min.jpg" class="img-responsive" alt="10 Best Artisan" /></a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <br>
+
+          <div class="container">
+            <div class="col-lg-12 text-center">
+              <h4>Featured</h4>
+            </div>
+          </div>
+
+                        <!-- Flickity HTML init -->
+      <div class="gallery js-flickity"
+        data-flickity-options='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true}'>
+        <a href="shop/categorypage.html"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" /></a>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
+      </div>
+
+      <br>
+
+    <div class="container">
+      <div class="col-lg-12 text-center">
+        <h4>Shop For Custom Made Gifts</h4>
+      </div>
+    </div>
+
+
+    <div style="max-width:650px;margin:auto;padding:0 10px 10px">
+      <div id="demo1" class="flex-images text-center">
+
+        <div class="item panel panel-default bootcards-media" data-w="200" data-h="200"><a href="shop/jewelry.html"><img src="http://res.cloudinary.com/bzzt/image/upload/c_fit,w_200/v1494668877/categoryImage/JPEG_image-379ABDC120EB-1-min.jpg"></a></div>
+        <div class="item panel panel-default bootcards-media" data-w="200" data-h="200"><a href="shop/musicart.html"><img src="http://res.cloudinary.com/bzzt/image/upload/c_fit,w_200/v1494668861/categoryImage/JPEG_image-519B7BC344B9-1-min.jpg"></a></div>
+        <div class="item panel panel-default bootcards-media" data-w="200" data-h="200"><a href="shop/weddings.html"><img src="http://res.cloudinary.com/bzzt/image/upload/c_fit,w_200/v1494668840/categoryImage/JPEG_image-5DB2316E9E5C-1-min.jpg"></a></div>
+        <div class="item panel panel-default bootcards-media" data-w="200" data-h="200"><a href="shop/clothing.html"><img src="http://res.cloudinary.com/bzzt/image/upload/c_fit,w_200/v1494742338/categoryImage/JPEG_image-B84CAC080D47-1-min.jpg"></a></div>
+        <div class="item panel panel-default bootcards-media" data-w="200" data-h="200"><a href="shop/homedecor.html"><img src="http://res.cloudinary.com/bzzt/image/upload/c_fit,w_200/v1494668884/categoryImage/JPEG_image-7808BF5189D9-1-min.jpg"></a></div>
+        <div class="item panel panel-default bootcards-media" data-w="200" data-h="200"><a href="shop/foodbeverages.html"><img src="http://res.cloudinary.com/bzzt/image/upload/c_fit,w_200/v1494668855/categoryImage/JPEG_image-BDCA61E036C3-1-min.jpg"></a></div>
+        <div class="item panel panel-default bootcards-media" data-w="200" data-h="200"><a href="shop/hobbies.html"><img src="http://res.cloudinary.com/bzzt/image/upload/c_fit,h_200/v1496240575/categoryImage/JPEG_image-57E1141451A2-1-min.jpg"></a></div>
+        <div class="item panel panel-default bootcards-media" data-w="200" data-h="200"><a href="shop/beautyproduct.html"><img src="http://res.cloudinary.com/bzzt/image/upload/c_fit,w_200/v1494669415/categoryImage/IMG_1238-min.jpg"></a></div>
+        <div class="item panel panel-default bootcards-media" data-w="200" data-h="200"><a href="shop/lifestyle.html"><img src="http://res.cloudinary.com/bzzt/image/upload/c_fit,w_200/v1494668868/categoryImage/JPEG_image-68021FEBDA52-1-min.jpg"></a></div>
+
+      </div>
+    </div>
+
+    <br>
+
+      <div class="container">
+      <div class="col-lg-12 text-center">
+        <h4>Customakr Pick Of The Month</h4>
+      </div>
+    </div>
+
+       <div class="container">
+                       <div class="row">
+                          <div class="col-lg-12">
+                           <div class="panel panel-default bootcards-media">
+                                  <!-- Flickity HTML init -->
+                                <div class="navprofiled profiled-main js-flickity" data-flickity-options='{"imagesLoaded": true, "initialIndex": 3}'>
+                                  <div class="profiled-cell"><a href="shop/categorypage.html"><img src="http://dummyimage.com/400x400/0d12b5/fff" alt="orange tree" /></a></div>
+                                  <div class="profiled-cell"><a href="shop/categorypage.html"><img src="http://dummyimage.com/400x400/0d12b5/fff" alt="submerged" /></a></div>
+                                  <div class="profiled-cell"><a href="shop/categorypage.html"><img src="http://dummyimage.com/400x400/0d12b5/fff" alt="cat nose" /></a></div>
+                                  <div class="profiled-cell"><a href="shop/categorypage.html"><img src="http://dummyimage.com/400x400/0d12b5/fff" alt="cat nose" /></a></div>
+                                  <div class="profiled-cell"><a href="shop/categorypage.html"><img src="http://dummyimage.com/400x400/0d12b5/fff" alt="cat nose" /></a></div>
+                                  <div class="profiled-cell"><a href="shop/categorypage.html"><img src="http://dummyimage.com/400x400/0d12b5/fff" alt="cat nose" /></a></div>
+                                </div>
+
+                                <div class="navprofiled profiled-nav js-flickity text-center"
+                                  data-flickity-options='{ "asNavFor": ".profiled-main", "contain": true, "pageDots": false, "prevNextButtons": false}'>
+                                  <div class="navprofiled-cell"><h3>Lawn Chair</h3><p class="lead">RM20</p></div>
+                                  <div class="navprofiled-cell"><h3>Lawn Chair</h3><p class="lead">RM20</p></div>
+                                  <div class="navprofiled-cell"><h3>Lawn Chair</h3><p class="lead">RM20</p></div>
+                                  <div class="navprofiled-cell"><h3>Lawn Chair</h3><p class="lead">RM20</p></div>
+                                  <div class="navprofiled-cell"><h3>Lawn Chair</h3><p class="lead">RM20</p></div>
+                                  <div class="navprofiled-cell"><h3>Lawn Chair</h3><p class="lead">RM20</p></div>
+                                </div><!--flickity-->
+                              <div class="panel-footer text-center">
+                                <p>Ads Here</p>
+                              </div>
+                            </div>
+                          </div><!--col-lg-12-->
+                        </div><!--row-->
+                      <!--listing gallery end-->
+                     </div><!--container-->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 bootcards-cards">
+          <div class="panel panel-default bootcards-media">
+            <div class="panel-heading">
+              <h3 class="panel-title">Top Artisan</h3>
+            </div>
+                    <!-- Flickity HTML init -->
+              <div class="gallery js-flickity"
+                data-flickity-options='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true }'>
+                <a href="shop/categorypage.html"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" /></a>
+                <a href="shop/categorypage.html"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" /></a>
+                <a href="shop/categorypage.html"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" /></a>
+                <a href="shop/categorypage.html" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" /></a>
+                <a href="shop/categorypage.html"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" /></g:link>
+                <a href="shop/categorypage.html"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" /></a>
+              </div>
+          </div><!-- bootcards media -->
+        </div><!-- col sm 6 boot card-->
+
+          <div class="col-sm-6 bootcards-cards">
+             <div class="panel panel-default bootcards-richtext">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Dear future Artisan,</h3>
+                  </div>
+                  <div class="panel-body image-beartisan">
+                    <p class="lead">There are stories of many ways to be an artisan. Skills thats been harnesed through training and dedication.
+                      An Idea that sparks a beautiful creation. <br /> A passion.</p>
+                    <h5>Let us help make your passion into a business</h5>
+                    <a href="shop/categorypage.html" class="btn btn-primary">Become an Artisan</a>
+
+                  </div>
+                </div><!--end rich text card-->
+        </div><!-- col sm 6 -->
+      </div><!-- row -->
+    </div><!-- container -->
+{% endblock %}
