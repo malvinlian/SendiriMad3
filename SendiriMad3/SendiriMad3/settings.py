@@ -162,8 +162,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'SendiriMad3/static')]
-STATIC_ROOT = 'static'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = 'SendiriMad3/static'
 
 
 MEDIA_ROOT = 'media'
@@ -172,6 +172,8 @@ MEDIA_URL = '/media/'
 OSCAR_USE_LESS = True
 OSCAR_SHOP_NAME = 'SendiriMade'
 OSCAR_SHOP_TAGLINE = ''
+OSCAR_HOMEPAGE_URL = ('home')
 OSCAR_DEFAULT_CURRENCY = 'MYR'
-LOGOUT_REDIRECT_URL = 'Home/'
+LOGOUT_REDIRECT_URL = ('home')
+
 

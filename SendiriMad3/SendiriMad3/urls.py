@@ -36,7 +36,8 @@ urlpatterns = [
      path('OnSale/',views.OnSale, name='OnSale'),
      path('ArtisanOfTheMonth/',views.artisanofthemonth, name='artisanofthemonth'),
      path('FAQ/',views.faq, name='faq'),
-     path('BecomeAnArtisan/',views.artisan, name='artisan'),
+  
+  
   
   
     #ShopsCategories
