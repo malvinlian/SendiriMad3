@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 def home(request):
   context = locals()
-  template = 'promotions/home.html'
+  template = 'home.html'
   return render(request,template,context)
 
 def OnSale(request):
@@ -22,9 +22,9 @@ def faq(request):
   template = 'SendiriMade/faq.html'
   return render(request,template,context)
 
-def artisan(request):
+def fashion(request):
   context = locals()
-  template = 'SendiriMade/artisan.html'
+  template = 'SendiriMade/ShopCategories/fashion.html'
   return render(request,template,context)
 
 
